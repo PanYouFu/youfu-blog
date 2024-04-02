@@ -21,7 +21,9 @@ const Login: React.FC<IProps> = (props) => {
 
   const handleGetVerifyCode = () => {}
 
-  const handleLogin = () => {}
+  const handleLogin = () => {
+    setIsShowVerifyCode(true)
+  }
 
   const handleOAuthGithub = () => {}
 
