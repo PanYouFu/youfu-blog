@@ -4,8 +4,8 @@ export const navs = [
     value: '/',
   },
   {
-    label: '咨询',
-    value: '/info',
+    label: '博客',
+    value: '/blogs',
   },
   {
     label: '标签',
