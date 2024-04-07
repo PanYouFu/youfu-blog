@@ -6,13 +6,19 @@
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:gen": "prisma generate",
+    "db:dev": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:push": "prisma db push"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^1.5.2",
     "@prisma/client": "^5.12.0",
     "antd": "^5.14.0",
     "mockjs": "^1.1.0",
     "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.4",
     "react": "^18",
     "react-dom": "^18"
   },
