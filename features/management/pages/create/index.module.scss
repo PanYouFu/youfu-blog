@@ -1,0 +1,44 @@
+.create {
+  padding: 20px;
+  .info {
+    font-size: 16px;
+    color: #254000;
+    .line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+  input {
+    width: 700px;
+    padding: 5px;
+    border-radius: 2px;
+    line-height: 24px;
+    border: 1px solid #3f660033;
+    box-shadow: 0 0 1px #3f660033;
+    &:focus {
+      outline: none;
+      border-color: #a0d911;
+      box-shadow: 0 0 10px #a0d911;
+    }
+    &::placeholder {
+      color: #3f660077;
+    }
+  }
+  textarea {
+    width: 700px;
+    padding: 5px;
+    border-radius: 2px;
+    line-height: 24px;
+    border: 1px solid #3f660033;
+    box-shadow: 0 0 1px #3f660033;
+    &:focus {
+      outline: none;
+      border-color: #a0d911;
+      box-shadow: 0 0 10px #a0d911;
+    }
+    &::placeholder {
+      color: #3f660077;
+    }
+  }
+}

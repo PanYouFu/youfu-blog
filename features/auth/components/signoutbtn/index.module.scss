@@ -1,0 +1,11 @@
+.logout {
+  display: flex;
+  padding: 5px;
+  border-radius: 4px;
+  background: #3f6600;
+  color: #ffffff;
+  cursor: pointer;
+  > span {
+    padding-left: 4px;
+  }
+}

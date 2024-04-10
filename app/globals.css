@@ -1,0 +1,10 @@
+@import 'bytemd/dist/index.css';
+
+a,a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+  color:inherit;
+}
+
+.bytemd {
+  min-height: calc(100vh - 300px);
+}
