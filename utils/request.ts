@@ -25,7 +25,9 @@ class Request {
     let queryParams = ""; //url参数
     let requestPayload = ""; //请求体数据
     //请求头
-    const headers = {};
+    const headers = {
+      "Cache-Control": "no-store",
+    };
 
     const config: Config =
       cacheTime || cacheTime === 0
