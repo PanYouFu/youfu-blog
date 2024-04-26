@@ -38,7 +38,7 @@ class Request {
 
     const config = {
       cache: "no-store",
-      next: { revalidate: 0 },
+      // next: { revalidate: 0 },
     };
 
     if (method === "GET" || method === "DELETE") {
