@@ -25,14 +25,21 @@ class Request {
     let queryParams = ""; //url参数
     let requestPayload = ""; //请求体数据
     //请求头
-    const headers = {};
+    const headers = {
+      // "Cache-Control": "no-store",
+    };
 
-    const config: Config =
-      cacheTime || cacheTime === 0
-        ? cacheTime > 0
-          ? { next: { revalidate: cacheTime } }
-          : { cache: "no-store" }
-        : { cache: "no-store" };
+    // const config: Config =
+    //   cacheTime || cacheTime === 0
+    //     ? cacheTime > 0
+    //       ? { next: { revalidate: cacheTime } }
+    //       : { cache: "no-store" }
+    //     : { cache: "no-store" };
+
+    const config: Config = {
+      cache: "no-store",
+      // next: { revalidate: 0 },
+    };
 
     if (method === "GET" || method === "DELETE") {
       //fetch对GET请求等，不支持将参数传在body上，只能拼接url
