@@ -7,6 +7,7 @@ import { KuaiLe } from "@/app/ui/fonts";
 import Icon from "../ui/icons";
 
 const MG_URL = "/management";
+const GITHUB_URL = "https://github.com/PanYouFu/youfu-blog";
 
 const Navbar: NextPage = () => {
   return (
@@ -19,11 +20,18 @@ const Navbar: NextPage = () => {
           </Link>
         ))}
       </section>
-      <Link href={MG_URL} legacyBehavior>
-        <a target="_blank">
-          <Icon name="FileCog" />
-        </a>
-      </Link>
+      <div>
+        <Link href={MG_URL} legacyBehavior>
+          <a target="_blank">
+            <Icon name="FileCog" />
+          </a>
+        </Link>
+        <Link href={GITHUB_URL} legacyBehavior>
+          <a target="_blank">
+            <Icon name="Github" />
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };

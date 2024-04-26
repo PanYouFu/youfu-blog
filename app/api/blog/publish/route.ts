@@ -21,10 +21,6 @@ export async function POST(request: NextRequest) {
     },
   });
   return Response.json({
-    data: {
-      a: 22,
-    },
-    code: 0,
-    msg: "发布成功",
+    id: blog.id,
   });
 }

@@ -3,7 +3,7 @@ import queryString from "query-string";
 type Method = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
 
 interface Params {
-  cacheTime?: number; //缓存时间，单位为s。默认强缓存，0为不缓存
+  cacheTime?: number; //缓存时间，单位为s。默认不缓存，0为不缓存
   params?: Record<string, any>;
 }
 
@@ -15,7 +15,7 @@ interface Props extends Params {
 type Config =
   | { next: { revalidate: number } }
   | { cache: "no-store" }
-  | { cache: "force-cache" };
+  | { cache: "no-cache" }; //  浏览器在其 HTTP 缓存中寻找匹配的请求 如果有匹配，无论是新的还是陈旧的，浏览器都会向远程服务器发出条件请求。如果服务器指示资源没有更改，则将从缓存中返回该资源。否则，将从服务器下载资源并更新缓存。 如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。
 
 class Request {
   /**
@@ -32,7 +32,7 @@ class Request {
         ? cacheTime > 0
           ? { next: { revalidate: cacheTime } }
           : { cache: "no-store" }
-        : { cache: "force-cache" };
+        : { cache: "no-store" };
 
     if (method === "GET" || method === "DELETE") {
       //fetch对GET请求等，不支持将参数传在body上，只能拼接url

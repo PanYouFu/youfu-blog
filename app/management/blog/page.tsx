@@ -1,8 +1,9 @@
-// import { AdminBlogListPage } from '@/features/admin';
-// import { auth } from '@/lib/auth'
+import { BlogList } from "@/features/management/components/bloglist";
+
+import { auth } from "@/lib/auth";
 
 export default async function Page() {
-  //   const session = await auth()
+  const session = await auth();
 
-  return <div>blog</div>
+  return <BlogList session={session} />;
 }

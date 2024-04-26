@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./index.module.scss";
+import { useRouter } from "next/navigation";
 import { MDEditorRef, MarkdownEditor } from "../../components/mdEditor";
 import { useRef, useState } from "react";
 import { message } from "antd";
@@ -17,6 +18,8 @@ export interface BlogInfo {
 export type WithSession = { session: Session | null };
 
 export const Create = ({ session }: WithSession) => {
+  const router = useRouter();
+
   const tagList: string[] = [];
   const [showForm, setShowForm] = useState(false);
   const [curInfo, setCurInfo] = useState({} as BlogInfo);
@@ -41,9 +44,7 @@ export const Create = ({ session }: WithSession) => {
   };
 
   const checkPermission = () => {
-    console.log("--checkPermission---");
-    if (!(session?.user as any).permission) {
-      console.log("--checkPermission--false-");
+    if (!(session?.user as any)?.permission) {
       message.error("暂无权限");
       return false;
     } else {
@@ -74,11 +75,15 @@ export const Create = ({ session }: WithSession) => {
     if (curInfo.content && curInfo.desc && curInfo.tag) {
       // 保存blog信息；1.前端store；2.后端数据库
       setBlogInfo(curInfo);
-      const data = await request.post("/api/blog/publish", {
+      const data: any = await request.post("/api/blog/publish", {
         params: curInfo,
       });
-      console.log("data:", data);
+
+      console.log("data", data);
+
       message.success("上传成功");
+
+      router.push(`/blog/${data?.id}`);
     } else {
       console.log("curInfo", curInfo);
       messageApi.open({

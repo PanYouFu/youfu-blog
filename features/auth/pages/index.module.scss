@@ -1,0 +1,44 @@
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  > div {
+    width: 350px;
+    margin-top: 200px;
+    border: 1px solid #7cb305;
+    border-radius: 8px;
+    padding: 10px;
+    > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #3f6600;
+        margin-bottom: 10px;
+      }
+      > a {
+        font-size: 14px;
+        color: #777777;
+      }
+    }
+    > div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: #5b8c00;
+      margin: 0 60px;
+      padding: 10px;
+      font-size: 16px;
+      color: #ffffff;
+      &:hover {
+        background: #7cb305;
+      }
+    }
+  }
+}
