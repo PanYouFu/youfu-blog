@@ -5,11 +5,11 @@ module.exports = {
     es6: true,
   },
   // 一个配置文件可以被基础配置中的已启用的规则继承。
-  extends: ['airbnb', 'airbnb', 'plugin:prettier/recommended'],
+  extends: ["next"],
   // 自定义全局变量
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
     _: true,
     $: true,
   },
@@ -21,12 +21,12 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
   },
   // ESLint 支持使用第三方插件。在使用插件之前，你必须使用 npm 安装它。
   // 在配置文件里配置插件时，可以使用 plugins 关键字来存放插件名字的列表。插件名称可以省略 eslint-plugin- 前缀。
   plugins: [
-    'react',
+    "react",
     // "@typescript-eslint"
   ],
   // ESLint 附带有大量的规则。你可以使用注释或配置文件修改你项目中要使用的规则。要改变一个规则设置，你必须将规则 ID 设置为下列值之一：
@@ -35,16 +35,16 @@ module.exports = {
   // "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
   rules: {
     semi: 0,
-    'no-unused-vars': [
+    "no-unused-vars": [
       1,
       {
-        vars: 'all',
-        args: 'after-used',
+        vars: "all",
+        args: "after-used",
         ignoreRestSiblings: true,
-        varsIgnorePattern: '^_',
-        argsIgnorePattern: '^_|^err|^ev', // _xxx, err, error, ev, event
+        varsIgnorePattern: "^_",
+        argsIgnorePattern: "^_|^err|^ev", // _xxx, err, error, ev, event
       },
     ],
-    'no-useless-escape': 2,
+    "no-useless-escape": 2,
   },
-}
+};
