@@ -1,0 +1,85 @@
+
+.mgHeader {
+  display:  flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin: 0 20px;
+  border-bottom: 0.5px solid #d3f261;
+  > p {
+    font-size: 24px;
+    background-image: linear-gradient(to right, #d3f261, #3f6600);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  > span {
+    display: flex;
+    color: #5b8c00;
+  }
+  > div {
+    padding: 4px;
+    border: 1px solid #7cb305;
+    border-radius: 4px;
+    color: #7cb305;
+    cursor: pointer;
+    &:hover {
+      background-color: #7cb305;
+      color: #ffffff;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.mgCnt {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 65px);
+  font-size: 16px;
+  .mgLeft {
+    position: relative;
+    flex: 0 0 200px;
+    border-right: 0.5px solid #d3f261;
+    .mgUser {
+      margin-top: 30px;
+      margin-left: 20px;
+      > img {
+        border-radius: 50%;
+      }
+    }
+    .mgNav {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 18px;
+      color: #3f6600;
+      .mgNavItem {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background-color: #7cb305;
+          color: #ffffff;
+        }
+        > a {
+          padding-left: 8px;
+          flex: 1;
+        }
+      }
+    }
+    .mgLogout {
+      position: absolute;
+      bottom: 100px;
+      left: 20px;
+      right: auto;
+    }
+  }
+  .mgRight {
+    flex: 1;
+  }
+
+}

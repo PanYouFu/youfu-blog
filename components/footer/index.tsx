@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
 const Layout: NextPage = () => {
-  return <div>footer</div>
-}
+  return <div></div>;
+};
 
-export default Layout
+export default Layout;

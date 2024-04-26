@@ -70,7 +70,6 @@ enum TagTypeEnum {
 
 model Tag {
   name     String      @unique
-  slug     String      @unique
   blogs    Blog[]
   snippets Snippet[]
   notes    Note[]
@@ -83,7 +82,6 @@ model Tag {
 
 model Blog {
   title       String  @unique
-  slug        String  @unique
   description String
   body        String  @db.Text
   cover       String?
@@ -98,7 +96,6 @@ model Blog {
 
 model Snippet {
   title       String  @unique
-  slug        String  @unique
   description String
   body        String  @db.Text
   published   Boolean @default(false)

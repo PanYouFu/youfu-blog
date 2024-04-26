@@ -1,35 +1,43 @@
 .navbar {
-    height: 60px;
-    background-color: #fff;
-    border-bottom: 1px solid #f1f1f1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  > p {
+    font-size: 24px;
+    background-image: linear-gradient(to right, #d3f261, #3f6600);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  > section {
+    flex: 0 1 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-    .logoArea {
-      font-size: 30px;
-      font-weight: bolder;
-      margin-right: 60px;
-    }
-  
-    .linkArea {
-      a {
-        font-size: 18px;
-        padding: 0 20px;
-        color: #515767;
-      }
-  
-      .active {
-        color: #1e80ff;
-      }
-    }
-  
-    .operationArea {
-      margin-left: 150px;
-  
-      button {
-        margin-right: 20px;
+    color: #5b8c00;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    > a {
+      flex: 1 0 50px;
+      &:hover {
+        color: #d3f261;
       }
     }
   }
-  
+  > div {
+    > a {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
