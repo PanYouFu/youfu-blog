@@ -37,6 +37,7 @@ class Request {
     //     : { cache: "no-store" };
 
     const config = {
+      cache: "no-store",
       next: { revalidate: 0 },
     };
 
