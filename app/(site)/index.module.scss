@@ -1,0 +1,24 @@
+.home {
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #5b8c00;
+  margin-top: 20px;
+  margin-left: 40px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+// 定义动画
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

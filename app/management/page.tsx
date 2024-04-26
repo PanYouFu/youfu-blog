@@ -1,9 +1,5 @@
 const Management = () => {
-  return (
-    <main>
-      <header>如果已经登录，那你会看到我，我是管理平台</header>
-    </main>
-  )
-}
+  return <main style={{ padding: "30px" }}>控制台首页，放些什么好呢···</main>;
+};
 
-export default Management
+export default Management;

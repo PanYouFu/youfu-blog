@@ -1,25 +1,26 @@
-'use client'
-
-import Link from 'next/link'
-
-import { signInWithGithub } from '../actions/sign-in'
+"use client";
+import Link from "next/link";
+import styles from "./index.module.scss";
+import { signInWithGithub } from "../actions/sign-in";
+import Icon from "@/components/ui/icons";
 
 export const SignIn = () => {
   const handleSignInWithGithub = async () => {
-    await signInWithGithub()
-  }
+    await signInWithGithub();
+  };
   return (
-    <div>
-      <header>
-        <Link href={'/'}>回首页</Link>
-      </header>
-
+    <div className={styles.signIn}>
       <div>
+        <header>
+          <p>登录youfu-blog控制台</p>
+          <Link href={"/"}>回首页</Link>
+        </header>
+        <br />
         <div>
-          我是登录页，如果你退出登录也会回到我这里，如果你直接打开管理页面，也会来到我这里
+          <Icon name="LogIn" color="#ffffff" />
+          <span onClick={handleSignInWithGithub}>使用 Github 登录</span>
         </div>
-        <button onClick={handleSignInWithGithub}>使用 Github 登录</button>
       </div>
     </div>
-  )
-}
+  );
+};

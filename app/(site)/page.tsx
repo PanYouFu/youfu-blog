@@ -1,7 +1,17 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
+import { KuaiLe } from "@/app/ui/fonts";
+import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
-  return <main>Hi~ o(*￣▽￣*)ブ，这里没什么难的~</main>
-}
+  return (
+    <div className={`${KuaiLe.className} ${styles.home}`}>
+      <span>哟~</span>
+      <br />
+      <span style={{ color: "#7cb305" }}>稀客呀!~</span>
+      <br />
+      <span style={{ fontSize: "60px" }}>Hi~ o(*￣▽￣*)ブ </span>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
