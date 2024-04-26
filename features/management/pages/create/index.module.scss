@@ -1,5 +1,6 @@
 .create {
   padding: 20px;
+  position: relative;
   .info {
     font-size: 16px;
     color: #254000;
@@ -10,7 +11,7 @@
     }
   }
   input {
-    width: 700px;
+    flex: 1;
     padding: 5px;
     border-radius: 2px;
     line-height: 24px;
@@ -26,7 +27,7 @@
     }
   }
   textarea {
-    width: 700px;
+    flex: 1;
     padding: 5px;
     border-radius: 2px;
     line-height: 24px;
@@ -40,5 +41,61 @@
     &::placeholder {
       color: #3f660077;
     }
+  }
+  .operation {
+    margin-top: 25px;
+    display: flex;
+    justify-content: end;
+    .save {
+      border: 1px solid #7cb305;
+      background-color: #ffffff;
+      color: #7cb305;
+      margin-right: 16px;
+    }
+    .confirm {
+      border: 1px solid #7cb305;
+      background-color: #7cb305;
+      color: #ffffff;
+    }
+  }
+  .form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      background: #ffffff;
+      padding: 20px 10px;
+      border: 1px solid #d3f261;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 500px;
+      background: #ffffff;
+      border-radius: 8px;
+      .btn {
+        align-self: flex-end;
+        border: 1px solid #7cb305;
+        background-color: #7cb305;
+        color: #ffffff;
+        padding: 4px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 60px;
+        text-align: center;
+      }
+    }
+  }
+  button {
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60px;
   }
 }

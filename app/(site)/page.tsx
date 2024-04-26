@@ -1,21 +1,17 @@
-import type { NextPage } from 'next'
-import { KuaiLe } from '@/app/ui/fonts'
-import Icon from '@/components/ui/icons'
+import type { NextPage } from "next";
+import { KuaiLe } from "@/app/ui/fonts";
+import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <main>
-      <div className={KuaiLe.className} style={{ fontSize: '48px' }}>
-        <span style={{ color: '#034ce0' }}>哟~</span>
-        <br />
-        <span>稀客呀!~</span>
-      </div>
-      <div style={{ fontSize: '60px', color: '#034ce0' }}>
-        <span className={KuaiLe.className}>Hi~</span> o(*￣▽￣*)ブ
-        <Icon name="Home" />
-      </div>
-    </main>
-  )
-}
+    <div className={`${KuaiLe.className} ${styles.home}`}>
+      <span>哟~</span>
+      <br />
+      <span style={{ color: "#7cb305" }}>稀客呀!~</span>
+      <br />
+      <span style={{ fontSize: "60px" }}>Hi~ o(*￣▽￣*)ブ </span>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

@@ -5,6 +5,48 @@ a,a:link,a:visited,a:hover,a:active{
   color:inherit;
 }
 
+/* 去除默认的外边距和内边距 */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* 去除列表样式 */
+ul, ol {
+  list-style: none;
+}
+
+/* 去除超链接的默认样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 重置图片边框 */
+img {
+  border-style: none;
+}
+
+/* 重置表单元素的默认样式 */
+button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* 让块级元素和行内元素都以盒模型展示 */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .bytemd {
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 150px);
 }

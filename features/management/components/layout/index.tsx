@@ -1,48 +1,50 @@
-import React from 'react'
-import Image from 'next/image'
-import { redirect } from 'next/navigation'
+import React from "react";
+import Image from "next/image";
+import { redirect } from "next/navigation";
 
-import { auth } from '@/lib/auth'
-import { SignOutButton } from '@/features/auth/components/signoutbtn/sign-out-btn'
-import Icon from '@/components/ui/icons'
-import styles from './index.module.scss'
-import { KuaiLe } from '@/app/ui/fonts'
-import Link from 'next/link'
+import { auth } from "@/lib/auth";
+import { SignOutButton } from "@/features/auth/components/signoutbtn/sign-out-btn";
+import Icon from "@/components/ui/icons";
+import styles from "./index.module.scss";
+import { KuaiLe } from "@/app/ui/fonts";
+import Link from "next/link";
 
 const NAV_LIST = [
   {
-    text: '博客',
-    icon: 'BookMinus',
-    link: '/management/blog',
+    text: "博客",
+    icon: "BookMinus",
+    link: "/management/blog",
   },
   {
-    text: '标签',
-    icon: 'Tag',
-    link: '/management/tag',
+    text: "标签",
+    icon: "Tag",
+    link: "/management/tag",
   },
   {
-    text: '用户',
-    icon: 'User',
-    link: '/management/user',
+    text: "用户",
+    icon: "User",
+    link: "/management/user",
   },
-]
+];
 
-const CREATE_URL = '/management/blog/create'
+const CREATE_URL = "/management/blog/create";
 
 export const MGLayout = async ({ children }: React.PropsWithChildren) => {
-  const session = await auth()
+  const session = await auth();
 
   if (!session?.user) {
-    redirect('api/auth/signin') // 固定路由
+    redirect("api/auth/signin"); // 固定路由
   }
 
-  const date = new Date()
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const dateString = `${year} ${month.toString().padStart(2, '0')} ${day
+  console.log("session-----", session);
+
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const dateString = `${year} ${month.toString().padStart(2, "0")} ${day
     .toString()
-    .padStart(2, '0')}`
+    .padStart(2, "0")}`;
 
   return (
     <>
@@ -80,5 +82,5 @@ export const MGLayout = async ({ children }: React.PropsWithChildren) => {
         <div className={styles.mgRight}>{children}</div>
       </main>
     </>
-  )
-}
+  );
+};
