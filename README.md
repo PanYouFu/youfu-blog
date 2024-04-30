@@ -1,5 +1,9 @@
 ## 简介
-使用 Next.js + TypeScript + Vecel 研发部署的个人博客网站，
+使用 Next.js + TypeScript + Vecel 研发部署的个人博客网站。
+
+[小结](./SUMMARY.md)
+
+[细节与填坑](./DETAILS.md)
 
 ## 预览
 
